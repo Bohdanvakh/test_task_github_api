@@ -27,5 +27,13 @@ module Types
     def test_field
       "Hello World!"
     end
+
+    field :get_github_data, String, null: false, description: "Get GitHub data by username" do
+      argument :github_login, String, required: true, description: "GitHub login of the user"
+    end
+
+    def get_github_data(github_login:)
+      GithubApiService.get_github_data(github_login)
+    end
   end
 end
