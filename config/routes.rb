@@ -5,9 +5,9 @@ Rails.application.routes.draw do
 
   post "/graphql", to: "graphql#execute"
 
-  get '/new', to: "profile_data#new"
-  get '/lorem', to: "profile_data#lorem"
-  get '/create', to: "profile_data#create"
+  root to: "profile_data#new"
+  # get '/new', to: "profile_data#new"
+  get '/show', to: "profile_data#show"
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
