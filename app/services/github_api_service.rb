@@ -1,10 +1,12 @@
 class GithubApiService
   def self.get_github_data(github_login)
-    response = HTTParty.get("https://api.github.com/users/#{github_login}/repos")
+    response_name = HTTParty.get("https://api.github.com/users/#{github_login}")
+    response_repos = HTTParty.get("https://api.github.com/users/#{github_login}/repos")
 
-    if response.success?
-      repositories = JSON.parse(response.body).map { |repo| repo["name"] }
-      user_name = JSON.parse(response.body).first["owner"]["login"]
+    if response_name.success? && response_repos.success?
+      repositories = JSON.parse(response_repos.body).map { |repo| repo["name"] }
+      user_name = response_name["name"]
+
       { name: user_name, repositories: repositories }
     else
       { name: nil, repositories: [] }
