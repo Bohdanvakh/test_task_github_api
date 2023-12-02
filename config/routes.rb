@@ -5,6 +5,10 @@ Rails.application.routes.draw do
 
   post "/graphql", to: "graphql#execute"
 
+  get '/new', to: "profile_data#new"
+  get '/lorem', to: "profile_data#lorem"
+  get '/create', to: "profile_data#create"
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
