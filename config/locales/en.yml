@@ -29,3 +29,12 @@
 
 en:
   hello: "Hello world"
+
+  new:
+    title: "GitHub Data Form"
+    btn: "Get Data"
+    grapql_link: "grapiql"
+
+  show:
+    no_found: "We can't find user with this login"
+    new_link: "new"

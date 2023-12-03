@@ -1,14 +1,14 @@
-<h1 class="text-center mt-5 mb-5">GitHub Data Form</h1>
+<h1 class="text-center mt-5 mb-5"><%= t('new.title') %></h1>
 
 <%= form_with(url: show_path, method: "get", local: true) do |form| %>
   <div class="navbar">
     <div class="d-flex mx-auto">
       <%= form.text_field :github_login, class: "form-control mr-sm-2" %>
-      <%= form.submit "Get Data", class: "btn btn-success my-2 my-sm-0" %>
+      <%= form.submit t('new.btn'), class: "btn btn-success my-2 my-sm-0" %>
     </div>
   </div>
 <% end %>
 
 <div class="mt-5" style="width: fit-content; margin-left: auto; margin-right: auto;">
-  <%= link_to "grapiql", graphiql_rails_path, class: "link-primary" %>
+  <%= link_to t('new.grapql_link'), graphiql_rails_path, class: "link-primary" %>
 </div>

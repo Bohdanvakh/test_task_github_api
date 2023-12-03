@@ -1,13 +1,13 @@
-<h2 class="w-50 mx-auto mt-5 mb-5"><%= @result[:name] %></h2>
+<h2 class="w-50 mx-auto mt-5 mb-5"><%= @result[:name]&.presence || t("show.no_found") %></h2>
 
 <div class="w-50 mx-auto">
   <ul style="list-style:none;">
     <% @result[:repositories].each do |repository| %>
-      <li class="w-50 mt-4">- <%= repository %></li>
+      <li class="w-50 mt-2">- <%= repository %></li>
     <% end %>
   </ul>
 </div>
 
 <div class="mt-5" style="width: fit-content; margin-left: auto; margin-right: auto;">
-  <%= link_to "new", root_path, class: "link-primary" %>
+  <%= link_to t("show.new_link"), root_path, class: "link-primary" %>
 </div>
