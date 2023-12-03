@@ -20,8 +20,10 @@ gem "importmap-rails"
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
 
+# Use httparty for simplifies the process of making HTTP requests to external APIs [https://github.com/jnunemaker/httparty]
 gem 'httparty'
 
+# Use pry-rails for debug [https://github.com/pry/pry-rails]
 gem 'pry-rails', '~> 0.3.9'
 
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
