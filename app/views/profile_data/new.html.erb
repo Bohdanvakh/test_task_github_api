@@ -1,6 +1,10 @@
-<h1>GitHub Data Form</h1>
+<h1 class="text-center mt-5 mb-5">GitHub Data Form</h1>
 
 <%= form_with(url: show_path, method: "get", local: true) do |form| %>
-  <%= form.text_field :github_login %>
-  <%= form.submit "Get GitHub Data" %>
+  <div class="navbar">
+    <div class="d-flex mx-auto">
+      <%= form.text_field :github_login, class: "form-control mr-sm-2" %>
+      <%= form.submit "Get Data", class: "btn btn-success my-2 my-sm-0" %>
+    </div>
+  </div>
 <% end %>

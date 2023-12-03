@@ -1,7 +1,9 @@
-<p><%= @result[:name] %></p>
+<h2 class="w-50 mx-auto mt-5 mb-5"><%= @result[:name] %></h2>
 
-<ul style="list-style:none;">
-  <% @result[:repositories].each do |repository| %>
-    <li>- <%= repository %></li>
-  <% end %>
-</ul>
+<div class="w-50 mx-auto">
+  <ul style="list-style:none;">
+    <% @result[:repositories].each do |repository| %>
+      <li class="w-50 mt-4">- <%= repository %></li>
+    <% end %>
+  </ul>
+</div>
