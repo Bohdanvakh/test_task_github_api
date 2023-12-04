@@ -5,6 +5,10 @@ class ProfileDataController < ApplicationController
   def show
     github_login = params[:github_login]
     @result = GithubApiService.get_github_data(github_login)
-    puts @result
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @result }
+    end
   end
 end
