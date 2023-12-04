@@ -11,8 +11,8 @@ RSpec.describe 'ProfileDataController', type: :request do
       json_response = JSON.parse(response.body)
 
       expect(response.code).to eq('200')
-      expect(json_response["name"]).to eq(valid_login_name)
-      expect(json_response["repositories"].any?).to eq(true)
+      expect(json_response['name']).to eq(valid_login_name)
+      expect(json_response['repositories'].any?).to eq(true)
     end
   end
 
@@ -22,9 +22,9 @@ RSpec.describe 'ProfileDataController', type: :request do
       json_response = JSON.parse(response.body)
 
       expect(response.code).to eq('200')
-      expect(json_response["name"]).to be_nil
-      expect(json_response["repositories"].any?).to eq(false)
-      expect(json_response["error"]).to eq(I18n.t('errors.fetching'))
+      expect(json_response['name']).to be_nil
+      expect(json_response['repositories'].any?).to eq(false)
+      expect(json_response['error']).to eq(I18n.t('errors.fetching'))
     end
   end
 end

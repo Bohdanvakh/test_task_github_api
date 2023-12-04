@@ -1,6 +1,5 @@
 class ProfileDataController < ApplicationController
-  def new
-  end
+  def new; end
 
   def show
     github_login = params[:github_login]
