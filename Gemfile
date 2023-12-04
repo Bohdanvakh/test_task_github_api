@@ -90,4 +90,5 @@ group :test do
   gem 'vcr', '~> 6.2'
   gem 'webmock', '~> 3.19', '>= 3.19.1'
 end
-gem 'graphiql-rails', group: :development
+
+gem 'graphiql-rails'#, group: :development
