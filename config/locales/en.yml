@@ -29,6 +29,8 @@
 
 en:
   hello: "Hello world"
+  errors:
+    fetching: "Error fetching data from GitHub API"
 
   new:
     title: "GitHub Data Form"

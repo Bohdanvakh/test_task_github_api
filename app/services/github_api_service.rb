@@ -9,7 +9,7 @@ class GithubApiService
 
       { name: user_name, repositories: repositories }
     else
-      { name: nil, repositories: [] }
+      { error: I18n.t('errors.fetching'), name: nil, repositories: [] }
     end
   end
 end

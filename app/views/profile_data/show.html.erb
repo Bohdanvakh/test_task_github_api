@@ -1,4 +1,4 @@
-<h2 class="w-50 mx-auto mt-5 mb-5"><%= @result[:name]&.presence || t("show.no_found") %></h2>
+<h2 class="w-50 mx-auto mt-5 mb-5"><%= @result[:name]&.presence || @result[:error] %></h2>
 
 <div class="w-50 mx-auto">
   <ul style="list-style:none;">
