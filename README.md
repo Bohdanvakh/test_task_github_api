@@ -36,7 +36,7 @@ Rails will automatically show all the logs on your terminal window.
 
 1. Open a browser
 
-2. Past https://testtaskgithubapi-b3bf79670448.herokuapp.com/ in serach field
+2. Past https://testtaskgithubapi-b3bf79670448.herokuapp.com/ in serach field (⚠️ this link is not active any)
 
 3. Enter your github login and press the button
 
@@ -44,6 +44,6 @@ Rails will automatically show all the logs on your terminal window.
 
 1. Open a browser
 
-2. Past https://testtaskgithubapi-b3bf79670448.herokuapp.com/graphiql in serach field
+2. Past https://testtaskgithubapi-b3bf79670448.herokuapp.com/graphiql in serach field (⚠️ this link is not active any)
 
 3. Enter `query {getGithubData(githubLogin: "githubLogin")}` where `githubLogin` is your github login
